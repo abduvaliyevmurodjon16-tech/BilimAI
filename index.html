@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maktab+ — darslar, baholar va uy vazifalarini kuzatish uchun o‘quvchi kabineti."
+    />
+    <title>Maktab+ | O‘quvchi kabineti</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#asosiy" aria-label="Maktab+ bosh sahifasi">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M5 11.5 16 5l11 6.5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-13Z" fill="currentColor" opacity=".18" />
+              <path d="M5 11.5 16 5l11 6.5M8.5 27V15.5h15V27M13 27v-7h6v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="brand-name">maktab<span>+</span></span>
+        </a>
+
+        <div class="school-switcher">
+          <span class="school-symbol">24</span>
+          <span class="school-details"><strong>24-maktab</strong><small>Toshkent shahri</small></span>
+          <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4" /></svg>
+        </div>
+
+        <p class="nav-caption">MENYU</p>
+        <nav class="main-nav" aria-label="Asosiy menyu">
+          <a class="nav-link is-active" href="#asosiy">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></svg>
+            <span>Asosiy</span>
+          </a>
+          <a class="nav-link" href="#jadval">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2" /><path d="M7.5 3.5v3M16.5 3.5v3M3.5 9.5h17M8 13h2m4 0h2m-8 3.5h2" /></svg>
+            <span>Dars jadvali</span>
+          </a>
+          <a class="nav-link" href="#baholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19.5h14M7 16V10m5 6V5m5 11v-8" /></svg>
+            <span>Baholar</span>
+            <span class="nav-count">4.7</span>
+          </a>
+          <a class="nav-link" href="#vazifalar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5h11.5v15H5v-15h3Zm0 0V3.5h8v2M8.5 11h7m-7 4h7m-7 4h4" /></svg>
+            <span>Uy vazifalari</span>
+            <span class="nav-dot" aria-label="2 ta yangi vazifa"></span>
+          </a>
+          <a class="nav-link" href="#davomat">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="m8.5 12 2.3 2.3 4.8-5" /></svg>
+            <span>Davomat</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <span class="help-icon">?</span>
+            <strong>Yordam kerakmi?</strong>
+            <p>Har qanday savol bo‘yicha bizga yozing.</p>
+            <a href="mailto:yordam@maktabplus.uz">Yordam markazi <span aria-hidden="true">↗</span></a>
+          </div>
+          <button class="profile-button" type="button" aria-label="Profil: Azizbek Karimov">
+            <span class="avatar avatar-blue">AK</span>
+            <span class="profile-info"><strong>Azizbek Karimov</strong><small>7-“A” sinf o‘quvchisi</small></span>
+            <svg class="more-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="4" cy="10" r="1" /><circle cx="10" cy="10" r="1" /><circle cx="16" cy="10" r="1" /></svg>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content" id="asosiy">
+        <header class="topbar">
+          <button class="mobile-menu-button" id="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+          <div class="breadcrumb"><span>O‘quvchi kabineti</span><span class="breadcrumb-separator">/</span><strong>Asosiy</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 4.5 4.5" /></svg>
+              <input id="search-input" type="search" placeholder="Qidirish..." aria-label="Vazifalardan qidirish" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="icon-button notification-button" id="notification-button" type="button" aria-label="Bildirishnomalar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4" /></svg>
+              <span class="notification-dot"></span>
+            </button>
+            <span class="topbar-divider"></span>
+            <span class="today-date" id="today-date">Juma, 24-may</span>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="welcome-row">
+            <div>
+              <p class="eyebrow"><span class="sun-icon" aria-hidden="true">☀</span> YAXSHI KUN!</p>
+              <h1>Salom, Azizbek <span class="wave" aria-hidden="true">👋</span></h1>
+              <p class="welcome-copy">Bugun ham yangi bilimlar sari olg‘a! Kuningizni rejalashtirib oling.</p>
+            </div>
+            <div class="term-pill"><span class="term-dot"></span> <span id="school-year">2026–2027 o‘quv yili</span> <span class="term-divider"></span> <span id="school-term">1-chorak</span></div>
+          </section>
+
+          <section class="stats-grid" aria-label="O‘quv ko‘rsatkichlari">
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon icon-lavender"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg></span><span class="stat-trend trend-up">+0.2 <span>↗</span></span></div>
+              <p class="stat-label">O‘rtacha baho</p><div class="stat-value">4.7 <span>/ 5</span></div><div class="stat-foot"><span class="mini-stars">★★★★★</span> <span>O‘tgan chorakka nisbatan</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon icon-mint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="m8 12 2.5 2.5 5-5" /></svg></span><span class="stat-trend trend-up">+2.4% <span>↗</span></span></div>
+              <p class="stat-label">Davomat</p><div class="stat-value">96<span>%</span></div><div class="stat-foot"><span class="foot-dot dot-green"></span> Bu chorakda 2 ta dars qoldirildi</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon icon-peach"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5h11.5v15H5v-15h3Zm0 0V3.5h8v2M8.5 11h7m-7 4h7" /></svg></span><span class="stat-trend trend-neutral">2 ta yangi</span></div>
+              <p class="stat-label">Uy vazifalari</p><div class="stat-value">5 <span>ta</span></div><div class="stat-foot"><span class="foot-dot dot-orange"></span> 2 tasini bugun topshirish kerak</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon icon-sky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M6.5 16V11m5 5V5m5 11V8" /></svg></span><span class="stat-trend trend-up">+1 <span>↗</span></span></div>
+              <p class="stat-label">Fanlar</p><div class="stat-value">12 <span>ta</span></div><div class="stat-foot"><span class="foot-dot dot-blue"></span> 8 ta fan bo‘yicha baho olindi</div>
+            </article>
+          </section>
+
+          <div class="dashboard-grid">
+            <section class="panel schedule-panel" id="jadval">
+              <div class="panel-heading">
+                <div><p class="section-kicker">BUGUNGI REJA</p><h2>Dars jadvali</h2></div>
+                <button class="text-button" type="button" data-scroll="#jadval">To‘liq jadval <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="schedule-date"><span class="calendar-small" aria-hidden="true">▦</span><strong id="schedule-date">Juma, 9-oktabr</strong><span class="schedule-date-muted">· 7 ta dars</span><span class="schedule-now">HOZIR 3-DARS</span></div>
+              <div class="lesson-list">
+                <article class="lesson-row is-current">
+                  <div class="lesson-time"><strong>10:20</strong><span>11:05</span></div>
+                  <span class="lesson-line"><i></i></span>
+                  <span class="subject-badge subject-math">MAT</span>
+                  <div class="lesson-info"><strong>Matematika</strong><span>Algebra · 204-xona</span></div>
+                  <span class="lesson-status">Hozir</span>
+                </article>
+                <article class="lesson-row">
+                  <div class="lesson-time"><strong>11:15</strong><span>12:00</span></div>
+                  <span class="lesson-line"><i></i></span>
+                  <span class="subject-badge subject-english">ING</span>
+                  <div class="lesson-info"><strong>Ingliz tili</strong><span>Speaking · 108-xona</span></div>
+                  <span class="teacher-avatar">MN</span>
+                </article>
+                <article class="lesson-row">
+                  <div class="lesson-time"><strong>12:10</strong><span>12:55</span></div>
+                  <span class="lesson-line"><i></i></span>
+                  <span class="subject-badge subject-history">TAR</span>
+                  <div class="lesson-info"><strong>O‘zbekiston tarixi</strong><span>Amir Temur davri · 301-xona</span></div>
+                  <span class="teacher-avatar teacher-pink">SO</span>
+                </article>
+                <article class="lesson-row">
+                  <div class="lesson-time"><strong>13:15</strong><span>14:00</span></div>
+                  <span class="lesson-line"><i></i></span>
+                  <span class="subject-badge subject-physics">FIZ</span>
+                  <div class="lesson-info"><strong>Fizika</strong><span>Laboratoriya ishi · 212-xona</span></div>
+                  <span class="teacher-avatar teacher-gold">BK</span>
+                </article>
+              </div>
+              <div class="schedule-note"><span class="note-icon">✦</span><span>Keyingi darsingiz <strong>15 daqiqadan</strong> so‘ng boshlanadi.</span></div>
+            </section>
+
+            <section class="panel assignments-panel" id="vazifalar">
+              <div class="panel-heading">
+                <div><p class="section-kicker">TOPSHIRIQ</p><h2>Uy vazifalari <span class="heading-count">2</span></h2></div>
+                <button class="more-button" type="button" aria-label="Uy vazifalari sozlamalari">···</button>
+              </div>
+              <div class="assignment-list" id="assignment-list">
+                <article class="assignment-card" data-search="matematika 12-bet 5-misol algebra">
+                  <div class="assignment-icon task-math">∑</div>
+                  <div class="assignment-copy"><div class="assignment-title-row"><strong>Matematika</strong><span class="due-tag due-today">Bugun</span></div><p>12-bet, 5–8-misollar</p><span class="assignment-meta">Dilnoza opa <span>·</span> 10:00 gacha</span></div>
+                  <button class="complete-button" type="button" aria-label="Matematika vazifasini bajarildi deb belgilash"></button>
+                </article>
+                <article class="assignment-card" data-search="ingliz tili essay my favourite book insho">
+                  <div class="assignment-icon task-english">Aa</div>
+                  <div class="assignment-copy"><div class="assignment-title-row"><strong>Ingliz tili</strong><span class="due-tag due-tomorrow">Ertaga</span></div><p>“My favourite book” mavzusida essay</p><span class="assignment-meta">M. Nazarova <span>·</span> 09:00 gacha</span></div>
+                  <button class="complete-button" type="button" aria-label="Ingliz tili vazifasini bajarildi deb belgilash"></button>
+                </article>
+                <article class="assignment-card assignment-done" data-search="biologiya o‘simliklar jadvali">
+                  <div class="assignment-icon task-biology">✿</div>
+                  <div class="assignment-copy"><div class="assignment-title-row"><strong>Biologiya</strong><span class="due-tag due-done">Topshirildi</span></div><p>O‘simliklar jadvalini to‘ldirish</p><span class="assignment-meta">S. Oripova <span>·</span> Kecha</span></div>
+                  <span class="done-check" aria-label="Bajarildi">✓</span>
+                </article>
+                <p class="empty-search" id="empty-search" hidden>Bu so‘rov bo‘yicha vazifa topilmadi.</p>
+              </div>
+              <button class="all-tasks-button" type="button" data-scroll="#vazifalar">Barcha vazifalarni ko‘rish <span aria-hidden="true">→</span></button>
+            </section>
+
+            <section class="panel grades-panel" id="baholar">
+              <div class="panel-heading">
+                <div><p class="section-kicker">NATIJALARINGIZ</p><h2>Fanlar bo‘yicha baholar</h2></div>
+                <button class="select-button" type="button">4-chorak <span aria-hidden="true">⌄</span></button>
+              </div>
+              <div class="grades-chart" aria-label="Fanlar bo‘yicha baholar diagrammasi">
+                <div class="chart-y-labels"><span>5</span><span>4</span><span>3</span></div>
+                <div class="chart-plot">
+                  <div class="chart-gridline line-five"></div><div class="chart-gridline line-four"></div><div class="chart-gridline line-three"></div>
+                  <div class="bar-group"><div class="bar bar-one" style="--bar-height: 88%"><span>4.8</span></div><small>Mat</small></div>
+                  <div class="bar-group"><div class="bar bar-two" style="--bar-height: 96%"><span>5.0</span></div><small>Ing</small></div>
+                  <div class="bar-group"><div class="bar bar-three" style="--bar-height: 78%"><span>4.5</span></div><small>Tar</small></div>
+                  <div class="bar-group"><div class="bar bar-four" style="--bar-height: 86%"><span>4.7</span></div><small>Fiz</small></div>
+                  <div class="bar-group"><div class="bar bar-five" style="--bar-height: 92%"><span>4.9</span></div><small>Bio</small></div>
+                  <div class="bar-group"><div class="bar bar-six" style="--bar-height: 70%"><span>4.2</span></div><small>Kim</small></div>
+                </div>
+              </div>
+              <div class="grades-footer"><span><i class="legend-dot"></i> Joriy o‘rtacha baho</span><strong>4.7 <small>/ 5</small></strong></div>
+            </section>
+
+            <section class="panel attendance-panel" id="davomat">
+              <div class="panel-heading">
+                <div><p class="section-kicker">BU CHORAK</p><h2>Davomat</h2></div>
+                <button class="more-button" type="button" aria-label="Davomat bo‘yicha qo‘shimcha ma’lumot">···</button>
+              </div>
+              <div class="attendance-content">
+                <div class="attendance-ring" role="img" aria-label="Davomat 96 foiz"><div><strong>96<span>%</span></strong><small>Davomat</small></div></div>
+                <div class="attendance-legend">
+                  <div><span class="legend-label"><i class="legend-dot"></i> Qatnashildi</span><strong>72 kun</strong></div>
+                  <div><span class="legend-label"><i class="legend-dot legend-absent"></i> Sababli</span><strong>2 kun</strong></div>
+                  <div><span class="legend-label"><i class="legend-dot legend-late"></i> Kechikdi</span><strong>1 marta</strong></div>
+                </div>
+              </div>
+              <div class="attendance-tip"><span aria-hidden="true">✦</span> Ajoyib natija! Shu zaylda davom eting.</div>
+            </section>
+          </div>
+
+          <footer class="page-footer"><span>© <span id="copyright-year">2026</span> Maktab+ ta’lim platformasi</span><span>O‘quvchingiz kelajagi uchun <span class="footer-heart">♥</span> bilan</span></footer>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
